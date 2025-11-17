@@ -1,0 +1,651 @@
+<!-- Sean Tiner 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptReview</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo2.png" />
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
+</head>    
+<body>
+    <!-- Navbar start ------------------------------------- -->
+    <div class="navbar">
+        <ul class="navMenu">
+            <li class="navMenuItem"><a class="singleUnderline">Test1</a></li>
+            <li class="navMenuItem"><a class="singleUnderline">Test2</a></li>
+            <li class="navMenuItem"><a class="singleUnderline">Test3</a></li>
+            <li class="navMenuItem mobileSearch">
+                <input class="searchBar" type="text" autocomplete="on">
+                <button class="searchButton" type="submit"><img src="/img/search.png" width="25px"></button>
+            </li>
+        </ul>
+
+        <div class="navLogo">
+            <a href="index.html"><img src="/img/Logo2.png" width="80px"></a>
+        </div>
+
+        <div class="searchContainer">
+            <input class="searchBar" type="text" autocomplete="on">
+            <button class="searchButton" type="submit"><img src="/img/search.png" width="25px"></button>
+        </div>
+
+        <a class="hamburgerButton">
+            <span class="hamburgerLine"></span>
+            <span class="hamburgerLine"></span>
+            <span class="hamburgerLine"></span>
+        </a>
+
+    </div>
+    <!-- Navbar end ------------------------------------- -->
+
+    <!-- Splash Image -->
+    <div class="mainImageContainer">
+        <img src="img/slide3.jpg">
+        <div class="centeredImageText">Text On Image</div>
+    </div>
+
+    <!-- Div containing main content -->
+    <div class="mainContent">
+
+        <!-- Greeting and Incrementor -->
+        <h1>Greeting</h1>
+        <p id="greetingMessage"></p>
+
+        <h1>Incrementor</h1>
+        <button class="incrementor" onclick="incrementFunction()">Click to increase the Count!</button>
+
+
+        <!-- Dropdown Menus ------------------------------------- -->
+        <h1>Dropdown Menus</h1>
+        <div class="dropdownMenuDiv">
+            <p>On hover:</p>
+            <div class="hoverDropdown">
+                <button class="hoverDropdownButton">Dropdown</button>
+                <div class="hoverDropdownContent">
+                    <a>item 1</a>
+                    <a>item 2</a>
+                    <a>item 3</a>
+                </div>
+            </div>
+
+            <p>On click:</p>
+            <div class="dropdown">
+                <button class="dropdownButton" onclick="dropdownMenuFunction()">Dropdown</button>
+                <div class="dropdownContent">
+                    <a>item 1</a>
+                    <a>item 2</a>
+                    <a>item 3</a>
+                </div>
+            </div>
+
+            <p>Animated:</p>
+            <div class="animatedDropdown">
+                <button class="animatedDropdownButton" onclick="animatedDropdownMenuFunction()">Dropdown</button>
+                <div class="animatedDropdownContent">
+                    <a>item 1</a>
+                    <a>item 2</a>
+                    <a>item 3</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Text Modal -->
+        <h1>Modal</h1>
+
+        <!-- Trigger/Open The Modal -->
+        <button class="modalButton" id="modalButton">Open Modal</button>
+
+        <!-- The Modal -->
+        <div class="modal" id="modal">
+            <!-- Modal content -->
+            <div class="modalContent" id="modalContent">
+                <span class="closeModal" id="closeModal">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+
+
+        <!-- Image Modal ------------------------------------- -->
+        <h1>Image Modal</h1>
+
+        <img src="img/slide2.jpg" class="modalImage" id="modalImage">
+
+        <div class="ImageModal" id="ImageModal">
+            <span class="closeImageModal" id="closeImageModal">&times;</span>
+            <img src="img/slide2.jpg" class="modalContentImage" id="modalContentImage">
+        </div>
+
+        <!-- Image carousel ------------------------------------- -->
+        <h1>Image Carousel</h1> 
+        <div class="imageCarousel">
+            <div class="carouselSlide fade">
+                <img src="img/slide1.jpg">
+            </div>
+
+            <div class="carouselSlide fade">
+                <img src="img/slide2.jpg">
+            </div>
+
+            <div class="carouselSlide fade">
+                <img src="img/slide3.jpg">
+            </div>
+
+            <div class="carouselSlide fade">
+                <img src="img/slide4.jpg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)"><</a>
+            <a class="next" onclick="plusSlides(1)">></a>
+
+        </div>
+
+        <div class="dotContainer">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <!-- Lightbox ------------------------------------- -->
+        <h1>Lightbox (Modal Image Carousel)</h1>
+
+        <img src="img/slide4.jpg" class="modalImage" id="lightboxImage">
+
+        <div class="lightbox" id="lightbox">
+            <span class="closeImageModal" id="closeLightbox">&times;</span>
+            <div class="imageCarousel">
+                <div class="lightboxSlide">
+                    <img src="img/slide4.jpg">
+                </div>
+
+                <div class="lightboxSlide">
+                    <img src="img/slide3.jpg">
+                </div>
+
+                <div class="lightboxSlide">
+                    <img src="img/slide2.jpg">
+                </div>
+
+                <div class="lightboxSlide">
+                    <img src="img/slide1.jpg">
+                </div>
+
+                <a class="prev" onclick="plusSlidesLightbox(-1)">&lt;</a>
+                <a class="next" onclick="plusSlidesLightbox(1)">&gt;</a>
+
+            </div>
+
+            <div class="dotContainer">
+                <span class="lightboxDot" onclick="currentSlideLightbox(1)"></span>
+                <span class="lightboxDot" onclick="currentSlideLightbox(2)"></span>
+                <span class="lightboxDot" onclick="currentSlideLightbox(3)"></span>
+                <span class="lightboxDot" onclick="currentSlideLightbox(4)"></span>
+            </div>
+
+        </div>
+        
+        <!-- Most common elements in array/characters in string -->
+        <h1>Most common elements in an array</h1>
+        <p id="arrayElements"></p>
+
+        <h1>Most common character in a string</h1>
+        <p id="commonCharacter"></p>
+
+
+        <!-- To-do List ------------------------------------- -->
+        <h1>To-do List</h1>
+        
+        <div class="toDoListContainer">
+            <div class="toDoInputContainer">
+                <input type="text" class="toDoInput" placeholder="Title...">
+                <span onclick="newElement()" class="addItemButton">Add</span>
+            </div>
+
+            <ul class="toDoList">
+                
+            </ul>
+        </div>
+
+
+        <!-- Basic Calculator ------------------------------------- -->
+        <h1>Basic Addition Calculator</h1>
+
+        <div class="basicCalculator">
+            <input type="text" class="basicCalcInput basicDisplay" id="+" disabled><br/>
+            <input type="text" class="basicCalcInput" id="box1"><br/>
+            <input type="text" class="basicCalcInput" id="box2"><br/>
+            <input type="button" value="Calculate Sum" class="basicCalcSum" onclick="calcSum()">
+        </div>
+
+
+        <!-- Advanced Calculator ------------------------------------- -->
+        <h1>Calculator</h1>
+
+        <div class="calculator">
+            <input type="text" id="display" class="display" disabled>
+            <div class="calculatorButtons">
+                <button class="calculatorButton clear" onclick="clearDisplay()">C</button>
+                <button class="calculatorButton operator" onclick="appendOperation('/')">/</button>
+                <button class="calculatorButton operator" onclick="appendOperation('*')">*</button>
+                <button class="calculatorButton operator" onclick="appendOperation('-')">-</button>
+
+                <button class="calculatorButton" onclick="appendNumber('7')">7</button>
+                <button class="calculatorButton" onclick="appendNumber('8')">8</button>
+                <button class="calculatorButton" onclick="appendNumber('9')">9</button>
+                <button class="calculatorButton operator" onclick="appendOperation('+')">+</button>
+
+                <button class="calculatorButton" onclick="appendNumber('4')">4</button>
+                <button class="calculatorButton" onclick="appendNumber('5')">5</button>
+                <button class="calculatorButton" onclick="appendNumber('6')">6</button>
+                <button class="calculatorButton equal" onclick="calculate()">=</button>
+
+                <button class="calculatorButton" onclick="appendNumber('1')">1</button>
+                <button class="calculatorButton" onclick="appendNumber('2')">2</button>
+                <button class="calculatorButton" onclick="appendNumber('3')">3</button>
+                <button class="calculatorButton" onclick="appendNumber('0')">0</button>
+            </div>
+        </div>
+
+
+        <!-- Animated Buttons + Underlines -->
+        <h1>Animated Buttons</h1>
+
+        <div class="buttonContainer">
+            <button class="fillButton">Button 1</button>
+            <button class="shadowButton">Button 2</button>
+            <button class="glowButton">Button 3</button>
+            <button class="dynamicButton"><span>Button 4</span></button>
+        </div>
+
+        <h1>Animated Underlines</h1>
+
+        <div class="animatedUnderlines">
+            <p class="doubleUnderline">Double Underline</p>
+            <p class="singleUnderline">Single Underline</p>
+            <p class="singleOverline">Single Overline</p>
+        </div>
+
+
+        <!-- Cards ----------------------------------------------- -->
+        <h1>Cards</h1>
+
+        <h3>Overlay</h3>
+        <div class="profileCardContainer">
+            <img src="img/slide3.jpg">
+            <div class="overlay">
+                <div class="overlayText">Overlay Text</div>
+            </div>
+        </div>
+
+        <h3>Single Card</h3>
+        <div class="singleCardContainer">
+            <div class="card" id="singleCard">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Flex Cards</h3>
+        <div class="flexContainer">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Flex Cards with one wide</h3>
+        <div class="flexContainer">
+            <div class="card wideCard">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Flex Image Cards</h3>
+        <div class="flexContainer">
+            <div class="altCard">
+                <div class="altCardImgContainer">
+                    <img src="img/slide1.jpg">
+                </div>
+                <div class="altCardContent">Card Content</div>
+            </div>
+            <div class="altCard">
+                <div class="altCardImgContainer">
+                    <img src="img/slide2.jpg">
+                </div>
+                <div class="altCardContent">Card Content</div>
+            </div>
+            <div class="altCard">
+                <div class="altCardImgContainer">
+                    <img src="img/slide3.jpg">
+                </div>
+                <div class="altCardContent">Card Content</div>
+            </div>
+        </div>
+
+        <h3>Grid Cards</h3>
+        <div class="gridContainer">
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Grid Cards with one longer and one wider</h3>
+        <div class="gridContainer">
+            <div class="card grid longer">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+            <div class="card grid wider">
+                <div class="card-inner">
+                    <div class="card-front">Front Side</div>
+                    <div class="card-back">Back Side</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Image Grid</h3>
+        <div class="gridContainer">
+            <div class="imageGridCard">
+                <img src="img/slide1.jpg">
+            </div>
+            <div class="imageGridCard">
+                <img src="img/slide2.jpg">
+            </div>
+            <div class="imageGridCard">
+                <img src="img/slide3.jpg">
+            </div>
+            <div class="imageGridCard">
+                <img src="img/slide4.jpg">
+            </div>
+        </div>
+
+        <h1>Paralax Images</h1>
+    </div>
+
+    <!-- Paralax Images -->
+    <div class="parallaxContainer"></div>
+    <div class="parallaxContainer parallaxContainer2"></div>
+    <div class="parallaxContainer parallaxContainer3"></div>
+
+    <div class="mainContent">
+        <div class="bufferContent">
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+
+        <!-- Order Form ------------------------------------- -->
+
+        <h1>Order Form</h1>
+        <hr>
+        <div class="formContainer">
+            <form autocomplete="on">
+                <div class="formRow">
+                    <div class="col-50">
+                        <h3>Billing Address</h3>
+                        <label for="fname">Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com">
+
+                        <label for="adr">Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="New York">
+
+                        <div class="formRow">
+                            <div class="col-50">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" placeholder="NY" maxlength="2">
+                            </div>
+                            <div class="col-50">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001" maxlength="5">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-50">
+                        <h3>Payment</h3>
+                        <div class="acceptedCardsContainer">
+                            <label for="cardSelectorDropdown">Select Card</label>
+                            <select class="cardSelectorDropdown">
+                                <option selected disabled hidden>Select</option>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">MasterCard</option>
+                                <option value="discover">Discover</option>
+                            </select>
+                        </div>
+
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+                        <div class="formRow">
+                            <div class="col-50">
+                                <label for="expyear">Exp Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2018" maxlength="4">
+                            </div>
+                            <div class="col-50">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="352" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <label>
+                    <input class="checkBox" type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </label>
+                <button type="submit" class="checkoutButton fillButton">Continue to checkout</button>
+
+            </form>
+            
+        </div>
+
+
+        <!-- Overlay Nav Menu -->
+        <h1>Overlay Nav</h1>
+        <button class="checkoutButton fillButton" id="openOverlayNavButton">Open Overlay Nav</button>
+        <div class="overlayNav" id="overlayNav">
+            <a class="closeOverlayNav" id="closeOverlayNav">&times;</a>
+            <div class="overlayNavContent">
+                <a class="singleUnderline">Test 1</a>
+                <a class="singleUnderline">Test 2</a>
+                <a class="singleUnderline">Test 3</a>
+                <a class="singleUnderline">Test 4</a>
+            </div>
+        </div>
+
+        <br/>
+        <!-- Fibonacci Calculator -->
+        <h1>Fibonacci</h1>
+        <input type="text" class="basicCalcInput" id="fibInput">
+        <input type="button" id="fibButton" value="Calculate Fibonacci" class="basicCalcSum">
+        <p id="fibResult"></p>
+        <br/>
+
+        <p>The pre tag preserves both spaces and line breaks:</p>
+
+        <pre>
+            My Bonnie lies over the ocean.
+
+            My Bonnie lies over the sea.
+
+            My Bonnie lies over the ocean.
+            
+            Oh, bring back my Bonnie to me.
+        </pre>
+
+    </div>
+
+
+    <!-- Auto Scroll Gallery -------------------------------------- -->
+     <div class="AutoScrollWrapper">
+        <div class="track">
+            <div class="AutoScrollLogo">
+                <img src="img/slide1.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide2.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide3.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide4.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide5.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide1.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide2.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide3.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide4.jpg"/>
+            </div>
+            <div class="AutoScrollLogo">
+                <img src="img/slide5.jpg"/>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer ------------------------------------------------- -->
+    <footer class="flexFooter">
+        <div class="footerContentContainer">
+            <h1>Footer</h1>
+            <p class="footerText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+                 
+            <hr>
+            <div class="footerFlexContainer">
+                <div class="flexFooterItem">
+                    <div><a class="singleUnderline">Link</a></div>
+                    <div><a class="singleUnderline">Example</a></div>
+                    <div><a class="singleUnderline">Test text</a></div>
+                    <div><a class="singleUnderline">Test</a></div>
+                </div>
+                <div class="flexFooterItem">
+                    <div><a class="singleUnderline">Test text</a></div>
+                    <div><a class="singleUnderline">Test text 2</a></div>
+                    <div><a class="singleUnderline">Example Link</a></div>
+                    <div><a class="singleUnderline">Test2</a></div>
+                </div>
+                <div class="flexFooterItem">
+                    <div><a class="singleUnderline">Test Link</a></div>
+                    <div><a class="singleUnderline">Link</a></div>
+                    <div><a class="singleUnderline">Link Example</a></div>
+                    <div><a class="singleUnderline">Test</a></div>
+                </div>
+            </div>
+            <hr>    
+        </div>
+    </footer>
+
+    
+
+</body>
+</html>
