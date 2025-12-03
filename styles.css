@@ -1458,7 +1458,12 @@ body {
     padding: 15px;
     border-radius: 10px;
     outline: none;
-    border: none;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.formContainer input[type=text]:focus {
+    border: 2px solid #2bc7f3;
 }
 
 .formRow {
@@ -1479,10 +1484,14 @@ body {
     display: inline-block;
 }
 
+.checkBox {
+    margin-top: 20px;
+}
+
 .checkoutButton {
     padding: 15px;
     border-radius: 60px;
-    margin-right: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
     border: none;
@@ -1673,4 +1682,5 @@ body {
         flex-direction: column;
     }
 }
+
 
